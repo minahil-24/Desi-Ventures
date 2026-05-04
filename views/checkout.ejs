@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.sticky-nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+   padding-top: 35px;
+   height: 95px; /* Adjusted height */
+}
+
+.logo img {
+    height: 60px; /* Adjust height as needed */
+    width: 60px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 6px;
+
+}
+
+.buttons button {
+    border: none;
+    /*background-color: transparent;*/
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.buttons button_w {
+    
+    /*background-color: transparent;*/
+    cursor: pointer;
+    padding-left: 0px;
+  
+}
+.delivery-btn {
+    margin-left: 280px;
+    background-color: #FFDB58; /* Mustard color */
+    color: #000000;
+    position: relative;
+    top: -40px; /* Adjust this value as needed */
+    transition: background-color 0.3s;
+}
+.delivery-btn:hover{
+    background-color: rgb(240, 255, 37);
+}
+
+.pickup-btn {
+    margin-left: 10px;
+   /* border: 1px solid #FFA500;  Border color for Pickup button */
+   
+    color: #f7f6f4; /* Text color on hover */
+    background-color: #FFA500; /* Mustard color */
+   /* transition: background-color 0.3s ease;  Smooth transition */
+   position: relative;
+   top: -40px; /* Adjust this value as needed */
+   transition: width 0.3s;
+}
+.pickup-btn:hover{
+    background-color: rgb(150, 111, 3);
+}
+
+
+
+.whatsapp img {
+    height: 41px; /* Adjust height as needed */
+    width: 47px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    margin-left: 750px;
+    position: relative
+    ;
+    top : -115px;
+    
+}
+
+.add-to-cart-btn {
+    font-weight: 500;
+    font-size: 19px;
+    background-color: #FFDB58; /* Mustard color */
+    color: #0e0d0d; /* White text color */
+    padding: 10px 20px;
+    border: none; /* Remove border */
+    border-radius: 10px; /* Adjust border radius */
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: -210px;
+    transition: opacity 0.3s, size 0.3s;
+    position: relative;
+    top:-163px;
+    float: right;
+}
+.add-to-cart-btn:hover{
+    opacity: 0.6;
+  
+}
+.footer{
+  
+  background-color: #eeeaea;
+  width: 100%;
+  height :350px;
+  margin-top: 30px;
+}
+.footer nav ul {
+          list-style-type: none; /* Remove default list style */
+          margin: 0;
+          padding: 0;
+          display: flex;
+          margin-top: 50PX;
+          margin-left: 50PX;
+      }
+
+      .footer nav li {
+          margin-right: 23px; /* Adjust spacing between links */
+      }
+
+      .footer nav a {
+          text-decoration: none;
+          font-size: 19px;
+       font-weight:500;
+          border: none; /* Remove border */
+          background-color: transparent; /* Transparent background */
+          color: rgb(122, 122, 122);
+          transition: color 0.3;
+      }
+      .footer nav a:hover{
+          color:#FFA500
+      }
+
+      .navbar_a {
+          width: 100%;
+  height: 54px;
+  background-color: transparent;
+  position: relative;
+bottom: 103px;
+  padding-left: 900px;
+  padding-top: 10px;
+
+
+}
+/* Style for the links */
+.navbar-link {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(105, 104, 104);
+  padding: 4px 8px;
+  font-size: 12px;
+  text-align: right;
+  font-weight: 500; font-size: 20px;
+  position: relative;
+  
+}
+/* Style for top and bottom borders */
+.navbar-top-border,
+.navbar-bottom-border {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  left: 0;
+}
+.navbar-top-border {
+  top: 0;
+}
+.navbar-bottom-border {
+  bottom: 0;
+}
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section, .right-section {
+    flex: 1;
+    margin: 10px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.flag {
+    width: 24px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.city-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.city-area select {
+    width: 48%;
+}
+
+button {
+    background-color: #ffc107;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+.delivery-button {
+    background-color: #007bff;
+}
+
+.delivery-button:hover {
+    background-color: #0056b3;
+}
+
+.cart-summary, .payment-methods {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.price-summary {
+    margin-top: 20px;
+}
+
+.payment-option {
+    margin-bottom: 10px;
+}
+
+.payment-option input {
+    margin-right: 10px;
+}
+
+.payment-option img {
+    vertical-align: middle;
+}
+
+.cash-change {
+    margin-top: 20px;
+}
+
+.place-order {
+    background-color: #28a745;
+    width: 100%;
+}
+
+.place-order:hover {
+    background-color: #218838;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <div class="logo">
+                <img style="position: sticky;" src="/pics/cooking_page-0001.jpg" alt="Logo">
+                
+            </div>
+            <h7 style="font-size: 15px; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">Desi Ventures<h7>
+                <br><h7 style="color: #06660e; font-size: 17px; 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                 white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">Open<h7>
+              <h7 style= "color: #000000;font-size: 14px; font-family: none; white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">09:00 AM - 09:00 PM </h7>
+        
+            <div class="buttons">
+                <button class="delivery-btn">Delivery</button>
+                <button class="pickup-btn">Pick Up</button>
+            </div>
+            <button type="button" style="margin-left: 490px; position: relative;
+             top: -77px; border: none; border-radius: 15px ; height: 38px; width: 10%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 15px; font-family:Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                <span ><span class="glyphicon glyphicon-map-marker"></span> 
+                  Lahore</button>
+
+                  <button type="button" style="margin-left: 230px; margin-right: 10px; position: relative;
+                  top: -78px; border: none; border-radius: 15px ; height: 40px; width: 17%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 15px; font-family:Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                     <span ><img style="height: 18px; width: 35px; vertical-align: middle;" src="/pics/phone-removebg-preview.png"></span> 
+                     +923094900205</button>    
+
+            <div class="whatsapp">
+                <a href="https://wa.me/yourphonenumber"><img src="/pics/WhatsApp-logo.png" alt="WhatsApp"></a>
+            </div>
+            
+            <button class="add-to-cart-btn">My Cart</button>
+    
+    </header>
+    <div class="container" id="orderForm">
+        <div class="left-section">
+            <div class="contact-information" id="contactInfo">
+                <h2>Contact Information</h2>
+                <div class="input-group">
+                    <img src="/pics/pakistan.jpg" alt="Pakistan Flag" class="flag">
+                    <input type="text" id="mobile" placeholder="+92 30- -------">
+                </div>
+            </div>
+            <div class="customer-information" id="customerInfo">
+                <h2>Customer Information</h2>
+                <input type="text" id="fullname" placeholder="Full name">
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="order-type" id="orderType">
+                <h2>Order Type</h2>
+                <button class="delivery-button">Delivery</button>
+                <p>Delivery hours for Friday: <strong>09:00 am - 11:30 pm</strong></p>
+            </div>
+            <div class="delivery-information" id="deliveryInfo">
+                <h2>Delivery Information</h2>
+                <input type="text" id="address" placeholder="Complete Delivery Address">
+               
+                <div class="input-group">
+                    <img src="/pics/pakistan.jpg" alt="Pakistan Flag" class="flag">
+                    <h6 style="font-size: larger;">Pakistan</h6>
+                </div>
+            </div>
+            <div class="special-instructions" id="specialInstructions">
+                <h2>Special Instructions</h2>
+                <textarea id="instructions" placeholder="Add any item you couldn't find on the store or any special instructions and we will do our best to make it happen."></textarea>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="cart-summary" id="cartSummary">
+              <!------ <h2>My Cart (2 items)</h2>
+               <h2 id="totalItems">My Cart <span id="/menu#itemCount">0</span></span>
+                <div class="total">
+                    <p>Total: Rs. 31,320</p>
+                </div>-----> 
+                <div class="tip">
+                    <p>Feel good? How about a tip</p>
+                    <button class="tip-button" id="tip25">25</button>
+                    <button class="tip-button" id="tip50">50</button>
+                    <button class="tip-button" id="tip75">75</button>
+                    <button class="tip-button" id="tip100">100</button>
+                    <input type="text" id="other-tip" placeholder="Other">
+                </div>
+                <!------<div class="price-summary">
+                    <p>SubTotal: Rs. 31,320</p>
+                    <p>Delivery fee: To be calculated</p>
+                    <p><strong>Total: Rs. 31,320</strong></p>
+                </div>---->
+            </div>
+            <div class="payment-methods" id="paymentMethods">
+                <h2>Payment Methods</h2>
+                <div class="payment-option">
+                    <input type="radio" id="cod" name="payment-method" checked>
+                    <label for="cod">Cash on Delivery<br><span>You will be asked to pay cash at your doorstep.</span></label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="card" name="payment-method">
+                    <label for="card">Credit/Debit Card/ <img src="/pics/easypaisa-new-logo-0B6AAF8329-seeklogo.com-removebg-preview _real.png" alt="Chikoo Pay"  style="width:40px; height: 40px;"></label>
+                </div>
+                <div class="cash-change" id="cashChange">
+                    <h2>Cash Change Request</h2>
+                    <input type="text" id="cash-change-input" placeholder="Requested amount should be greater than Total.">
+                </div>
+                <button class="place-order" id="placeOrderBtn" onclick="placeOrder()">PLACE ORDER</button>
+            </div>
+        </div>
+    </div>
+    
+    <script >
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const tipButtons = document.querySelectorAll('.tip-button');
+        const otherTipInput = document.getElementById('other-tip');
+    
+        tipButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const tipAmount = parseFloat(this.textContent);
+                updateTotal(tipAmount);
+            });
+        });
+    
+        otherTipInput.addEventListener('input', function () {
+            const tipAmount = parseFloat(this.value) || 0;
+            updateTotal(tipAmount);
+        });
+    });
+        function updateTotal(tipAmount) {
+            const subTotal = 31320;
+            const totalElement = document.querySelector('.price-summary strong');
+            const newTotal = subTotal + tipAmount;
+            totalElement.textContent = `Total: Rs. ${newTotal.toFixed(2)}`;
+        }
+        
+        function placeOrder() {
+    // Retrieve values from HTML elements
+    const mobile = document.getElementById('mobile').value;
+    const fullname = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const instructions = document.getElementById('instructions').value;
+
+    let tipAmount = 0;
+    const tipButtons = document.querySelectorAll('.tip-button');
+    tipButtons.forEach(button => {
+        if (button.classList.contains('selected')) {
+            tipAmount = parseInt(button.textContent);
+        }
+    });
+
+    const otherTip = document.getElementById('other-tip').value;
+    if (otherTip.trim() !== '') {
+        tipAmount = parseInt(otherTip);
+    }
+
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked').id;
+    const cashChangeRequest = document.getElementById('cash-change-input').value;
+
+   
+    // Example total amount calculation (you should adjust this based on your application logic)
+    const totalAmount = 31320; // Example total amount
+
+    // Prepare the data to send in the POST request
+    const data = {
+        mobile,
+        fullname,
+        email,
+        address,
+        instructions,
+       
+        paymentMethod,
+        
+        totalAmount
+    };
+
+    // Send POST request to server
+    fetch('/place-order', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Success:', data);
+        // Show success message
+        alert('Your order has been placed.');
+        // Redirect to /home
+        window.location.href = '/home';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Show error message
+        alert('Failed to place order. Please try again later.');
+    });
+}
+
+    </script>
+    <div class="footer">
+        <h3 style="font-family: 'Cooper Black'; margin-left: 50px; position: relative; top: 30px">Desi Ventures</h3>
+        <nav>
+            <ul>
+                <li><a href="#">Delivery Hours</a></li>
+                <li><a href="#">Delivery Location</a></li>
+                <li><a href="#">Store Timngs</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">My Profile</a></li>
+            </ul>
+        </nav>
+        <br><h3 class="head_text" style=" font-weight: 500; font-size: 23px; margin-left: 50px; position: relative; top: 01px">Contact us</h3>
+       
+            <button type="button" style="border: none; margin-left:60px; position: relative; 
+            top: 07px; border: none; border-radius: 15px ; height: 45px; width: 09%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;font-weight: 700;  font-size: 18px;  " class="btn btn-default btn-sm">
+               <span ><img style="position: relative; right: 13px; height: 35px; width: 50px; padding-right: 0px; " src="/pics/WhatsApp-logo.png" alt="WhatsApp"></span> 
+               Chats</button>
+    
+             <button type="button" style="margin-left:30px;  position: relative;
+                top: 7px; border: none; border-radius: 15px ; height: 45px; width: 13%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 18px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-default btn-sm">
+               <span ><img style="height: 18px; width: 35px; " src="/pics/phone-removebg-preview.png"></span> 
+               +923094900205</button>
+               <h3 class="head_text" style="position: relative; top: -100px; margin-left:450px; font-weight: 500; font-size: 23px;">Store Timings</h3>
+                   <h3 class="head_text" style="position: relative; top: -92px; margin-left:450px; font-weight: 500; font-size: 22px;">65 green park 80 ft road Lahore</h3>
+                   <h3 class="head_text" style="position: relative; top: -265px; margin-left:1145px; font-weight: 500; font-size: 20px;">Payment Method</h3>
+                <img style="position:absolute; top: 1190px; margin-left:1150px; width: 10%; height: 80px;" src="/pics/easypaisa-new-logo-0B6AAF8329-seeklogo.com-removebg-preview _real.png"
+                  >
+               <div class="navbar_a">
+                    <a href="#" class="navbar-link">Teams of Service</a>
+                    <a href="#" class="navbar-link">Privacy Policy</a>
+                    <a href="#" class="navbar-link">Return</a>
+                    <div class="navbar-top-border"></div>
+                    <div class="navbar-bottom-border"></div>
+                 </div>
+                
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dddada;
+    overflow-x: hidden; 
+    
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding-top: 35px;
+    height: 105px; /* Adjusted height */
+}
+
+.logo img {
+    height: 60px; /* Adjust height as needed */
+    width: 60px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 6px;
+}
+
+.buttons button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.delivery-btn {
+    margin-left: 280px;
+    background-color: #FFDB58; /* Mustard color */
+    color: #000000;
+    position: relative;
+    top: -40px; /* Adjust this value as needed */
+    transition: background-color 0.3s;
+}
+.delivery-btn:hover{
+    background-color: rgb(240, 255, 37);
+}
+
+.pickup-btn {
+    margin-left: 10px;
+    color: #f7f6f4; /* Text color on hover */
+    background-color: #FFA500; /* Mustard color */
+    position: relative;
+    top: -40px; /* Adjust this value as needed */
+    transition: width 0.3s;
+}
+.pickup-btn:hover{
+    background-color: rgb(150, 111, 3);
+}
+
+.whatsapp img {
+    height: 38px; /* Adjust height as needed */
+    width: 47px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    margin-left: 750px;
+    position: relative;
+    top : -115px;
+}
+
+.add-to-cart-btn {
+    background-color: #FFDB58; /* Mustard color */
+    color: #0e0d0d; /* White text color */
+    padding: 10px 20px;
+    border: none; /* Remove border */
+    border-radius: 10px; /* Adjust border radius */
+    cursor: pointer;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: -160px;
+    transition: opacity 0.3s, size 0.3s;
+    position: relative;
+    top:-155px;
+    margin-left: 759px;
+    float: right;
+}
+.add-to-cart-btn:hover{
+    opacity: 0.6;
+}
+
+.all_pic{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 34%;
+    width: 85%;
+    border-radius: 19px;
+}
+.all_pic_second{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 800px;
+    width: 85%;
+    border-radius: 19px;
+    margin-right: 130px;
+    padding-top: 20px;
+}
+.head_text_a{
+  
+    color: #FFA500;
+    font-family:'Segoe UI Black';
+    font-size: large;
+    
+    padding-left: 40px;
+
+
+}
+.paragraph_text{
+   font-size: large;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 30px;
+   padding:  50px;
+
+}
+@media (max-width: 767px) {
+    .paragraph_text {
+        display: none;
+    }
+}
+.buttons button {
+border: none;
+/*background-color: transparent;*/
+cursor: pointer;
+font-size: 16px;
+
+padding: 8px 15px;
+border-radius: 5px;
+}
+.store-timings {
+    position: relative;
+    bottom: -60px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+.container {
+display: flex;
+flex-direction: column;
+min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+}
+
+
+
+.footer {
+background-color: #eeeaea;
+width: 100%;
+height: 350px;
+margin-left: 0px;
+margin-bottom: 0px;
+
+position: relative;
+    bottom: 0;
+    left: 0;
+    
+
+}
+
+.footer nav ul {
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 50PX;
+    margin-left: 50PX;
+ 
+}
+
+.footer nav li {
+    margin-right: 23px; /* Adjust spacing between links */
+}
+
+.footer nav a {
+    text-decoration: none;
+    font-size: 19px;
+ font-weight:500;
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
+    color: rgb(122, 122, 122);
+    transition: color 0.3;
+    margin-top: -50px; /* Adjust top margin */
+}
+.footer nav a:hover{
+    color:#FFA500
+}
+
+.navbar_a {
+    width: 100%;
+height: 54px;
+background-color: transparent;
+position: relative;
+margin-top: -350px;
+padding-left: 900px;
+padding-top: 10px;
+
+
+}
+/* Style for the links */
+.navbar-link {
+display: inline-block;
+text-decoration: none;
+color: rgb(105, 104, 104);
+padding: 4px 8px;
+font-size: 12px;
+text-align: right;
+font-weight: 500; font-size: 20px;
+}
+/* Style for top and bottom borders */
+.navbar-top-border,
+.navbar-bottom-border {
+content: "";
+position: absolute;
+width: 100%;
+height: 1px;
+background-color: #ccc;
+left: 0;
+}
+.navbar-top-border {
+top: 0;
+}
+.navbar-bottom-border {
+bottom: 0;
+}
+.all_pic{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 34%;
+    width: 85%;
+    border-radius: 19px;
+}
+.all_pic_second{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 800px;
+    width: 85%;
+    border-radius: 19px;
+    margin-right: 130px;
+    padding-top: 20px;
+}
+.head_text_a{
+  
+    color: #FFA500;
+    font-family:'Segoe UI Black';
+    font-size: large;
+    
+    padding-left: 40px;
+
+
+}
+.paragraph_text{
+   font-size: large;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 30px;
+   padding:  50px;
+
+}
+@media (max-width: 767px) {
+    .paragraph_text {
+        display: none;
+    }
+}
+.buttons button {
+border: none;
+/*background-color: transparent;*/
+cursor: pointer;
+font-size: 16px;
+
+padding: 8px 15px;
+border-radius: 5px;
+}
+.store-timings {
+    position: relative;
+    bottom: -60px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+.clearfix::after {
+content: "";
+display: table;
+clear: both;
+}

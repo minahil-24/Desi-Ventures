@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desi Ventures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    body {
+    background-color: black;
+    margin: 0;   /* Remove default margin   */
+    padding: 0; /*  Remove default padding */
+   height: 330PX;
+   overflow-x: hidden;
+}
+
+.main_div
+{
+    display: flex;
+    flex-direction: column; /* Stack the nav bars vertically */
+    height: 100vh;         /* Use viewport height */
+    position: relative;   /* Set position to relative */
+ }
+
+.give_location_nav_bar 
+{            
+    background-color: rgb(34, 68, 68);
+    height: 8%;
+    border-bottom: 1px dashed rgb(255, 255, 255);
+    animation: moveDashedBorder 4s linear infinite;
+    position: relative; /* Set position to relative */
+    z-index: 3; /* Ensure the nav bar stays on top */
+}
+
+.give_location_nav_bar_location_link
+ {
+    display: block;
+    padding: 10px 20px ;
+    margin-left: 1%;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: larger;
+    font-family: Segoe UI system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                 Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+.main_nav_bar
+ {
+    margin-top: 0.6%;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(255, 211, 13);
+    height: 18%;
+    width: 100%; /* Set width to 100% */
+   
+   
+    border-top-left-radius: 50px; /* Adjust the radius as needed */
+    border-top-right-radius: 50px; /* Adjust the radius as needed */
+    position: relative; /* Set position to relative */
+    z-index: 01; /*Ensure the nav bar stays above the video*/
+ }
+.main_nav_bar_menu
+{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: large;
+text-decoration: none;
+float: right;
+color: darkred;
+list-style: none;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+position: relative;
+padding: 8px 20px;
+margin: 1% ;
+margin-top: 3.7%;
+transition: 
+color 0.3s,
+background-color 0.3s,
+box-shadow 0.3s,
+border-radius 0.3s ,
+border 0.3,
+border-color 0.3;
+
+cursor: pointer; 
+/*
+Add transition for
+color,
+background-color, 
+box-shadow,
+and
+border-radius
+*/
+
+}
+
+.main_nav_bar_menu:hover {
+color: yellow;
+/*  background-color: darkred;  Change background color on hover */
+box-shadow: 0 0 20px rgba(143, 2, 2, 0.8); /* Add shadow on hover */
+border-radius: 36px; /* Add border radius on hover */
+border: 1px solid;
+border-color:  gold;
+}
+@keyframes moveDashedBorder {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.main_nav_bar_menu:hover {
+color: rgb(212, 80, 39);
+
+}
+.main_logo_on_2_nav_bars {
+display: flex;
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+margin-left: 8%;
+overflow: visible;
+height: 330%;
+width: 10%;
+z-index: 3;
+position: relative;
+background-color: rgb(255, 211, 13);
+box-shadow: 0 0 20px rgba(143, 2, 2, 0.8);
+border-bottom-left-radius: 10%;
+border-bottom-right-radius: 10%;
+}
+
+.main_logo_on_2_nav_bars_pic {
+display: block;
+height: auto; /* Adjust height as needed */
+width: auto; /* Adjust width as needed */
+max-height: 100%;
+max-width: 100%;
+position: relative;
+overflow: visible;
+}
+
+.welcome_to{
+margin-top: 160px;
+margin-left: 159px;
+color: rgb(255, 211, 13); 
+font: size 33px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+position: relative;
+bottom: 20px;
+}
+
+.video {
+    opacity: 0.1;
+    position:absolute; /* Set position to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    z-index: 0; /* Ensure the video stays behind other elements */
+    overflow: hidden;
+}
+.big_online_order_sign {
+display: flex;
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+position: relative;
+width: 20%;
+height: 80%;
+margin-left: 77%;
+bottom: 69%;
+
+}
+
+.big_online_order_sign_link {
+display: block;
+color: darkred;
+font-size: 36px;
+text-decoration: none;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.wel_word{
+font-size: 34px;
+background-color:  rgb(248, 208, 31); 
+
+
+}
+.order_food{
+margin-top: 10px;
+margin-left: 180px;
+background-color: rgb(255, 255, 255) ;
+width: 17%;
+height: 10%;
+justify-content: center;
+font-size: 50px;
+border-radius: 5px;
+color: rgb(10, 10, 10);
+font-size: 24px;
+font-family:'Yu Gothic UI Semilight';
+padding-top: 10px;
+padding-bottom: 10px;
+border: none;
+cursor: pointer;
+position: relative
+;
+bottom: 30px;
+}
+.special_button{
+margin-top: 20px;
+margin-left: 40px;
+background-color: rgb(252, 213, 41) ;
+width: 39%;
+height: 13%;
+justify-content: center;
+font-size: 50px;
+color: black;
+font-size: 24px;
+font-family:'Yu Gothic UI Semilight';
+padding-top: 0%;
+padding-left: 0%;
+border: none;
+
+}
+.specail::after {
+    content: '';
+   
+    position: absolute;
+    right: 643px;
+    bottom : -320px;
+    width: 5%;
+    height: 4px; /* Adjust the height as needed */
+    background-image: linear-gradient(to right,  rgb(248, 208, 31), rgb(248, 208, 31) ); /* Use gradient for custom line style */
+
+}
+
+.special_div{
+    
+position: relative;
+margin-top: 100px;
+margin-right: 130px;
+width: 80%;
+margin-left: 9%;
+height: 410px;
+
+
+}
+.spe_text{
+    color: white;
+    font-size: 78px;
+    margin-left: 12px;
+}
+
+
+.scrolling-wrapper {
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+}
+
+.scrolling-content {
+display: flex;
+white-space: nowrap; /* Prevents line breaks */
+animation: scroll-left 50s linear infinite;
+}
+
+.scrolling-content img {
+width: 100px; /* Adjust size as necessary */
+height: auto;
+}
+
+@keyframes scroll-left {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(-50%);
+}
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 211, 13); /* Thumb color */
+    border-radius: 10px; /* Optional: rounded scrollbar */
+}
+
+
+
+/* Firefox */
+body {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
+}
+
+
+.delivery-section {
+/* position: relative; */
+/* padding: 40px 0px 50px; */
+background-color: #fcc012;}
+.title {
+position: relative;
+line-height: 1em;
+color: #ffffff;
+font-size: 35px;
+font-weight: 700;
+font-family: "Dancing Script", cursive;}
+.delivery-section .content-column .text {
+position: relative;
+margin-top: 10px;
+margin-bottom: 32px;
+}
+
+.text {
+font-size: 16px;
+line-height: 1.6em;
+font-weight: 400;
+color: #555555;
+margin: 0;
+}
+
+.footer{
+
+background-color: #eeeaea;
+width: 100%;
+height :350px;
+margin-top: -30px;
+}
+.footer nav ul {
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 50PX;
+    margin-left: 50PX;
+}
+
+.footer nav li {
+    margin-right: 23px; /* Adjust spacing between links */
+}
+
+.footer nav a {
+    text-decoration: none;
+    font-size: 19px;
+ font-weight:500;
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
+    color: rgb(122, 122, 122);
+    transition: color 0.3;
+}
+.footer nav a:hover{
+    color:#FFA500
+}
+
+.navbar_a {
+    width: 100%;
+height: 54px;
+background-color: transparent;
+position: relative;
+bottom: 215px;
+padding-left: 900px;
+padding-top: 10px;
+
+
+}
+/* Style for the links */
+.navbar-link {
+display: inline-block;
+text-decoration: none;
+color: rgb(105, 104, 104);
+padding: 4px 8px;
+font-size: 12px;
+text-align: right;
+font-weight: 500; font-size: 20px;
+}
+/* Style for top and bottom borders */
+.navbar-top-border,
+.navbar-bottom-border {
+content: "";
+position: absolute;
+width: 100%;
+height: 1px;
+background-color: #ccc;
+left: 0;
+}
+.navbar-top-border {
+top: 0;
+}
+.navbar-bottom-border {
+bottom: 0;
+}
+</style>
+    
+</head>
+<body>
+<div class="main_div">
+    
+    <nav class="give_location_nav_bar">
+        <a class="give_location_nav_bar_location_link" href="#">Food Deliver City | Lahore</a>
+        <div class="main_logo_on_2_nav_bars">
+            <img class=" main_logo_on_2_nav_bars_pic" src ="/pics/cooking_page-0001.jpg">
+        </div>
+    </nav>
+    <nav class="main_nav_bar">
+      <div style="margin-right: 25%; display: block;">
+       <li  ><a href="/contact" class="main_nav_bar_menu">CONTACT</a></li>
+       <li  ><a href="/menu" class="main_nav_bar_menu" style="margin-top: 20px;">ONLINE ORDER</a></li>
+       <li ><a href="/menu" class="main_nav_bar_menu" style="margin-top: 01px;">MENU</a></li>
+       <li ><a href="#" class="main_nav_bar_menu" style="margin-top: -18px;">HOME</a></li>
+       
+    </div>
+    <div class="big_online_order_sign">
+        <a class="big_online_order_sign_link"href="/menu">Online Order</a>
+     </div>
+    </nav>
+    <div class="scrolling-wrapper">
+        <div class="scrolling-content">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <!-- Duplicate the images for seamless transition -->
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+            <img src="/pics/header-layer.png" alt="Scrolling Image">
+        </div>
+    </div>
+    <video class="video" autoplay loop muted>
+        <source src="/pics/InShot_20240323_163947250.mp4" type="video/mp4">
+    </video>
+    <h1 class="welcome_to" style="font-size:30px; color:  rgb(255, 211, 13); ">꧁༒𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸༒꧂</h1>
+    <div style=" margin-left: 13%; font-size: 20%; position: relative ; bottom: 20px;"><h1 style=" font-size: 63px; color : rgb(253, 253, 253); margin-top: 174; margin-left: 160;">𝐃𝐞𝐬𝐢 𝐕𝐞𝐧𝐭𝐮𝐫𝐞'𝐬 𝐑𝐞𝐬𝐭𝐚𝐮𝐫𝐚𝐧𝐭</h1>
+    </div> 
+    <h1 style="margin-left: 13%; font-size: 30px; color: rgb(253, 253, 253); position: relative; bottom: 30px;">𝐖𝐞'𝐫𝐞 𝐧𝐨𝐭 𝐣𝐮𝐬𝐭 𝐬𝐞𝐫𝐯𝐢𝐧𝐠 𝐦𝐞𝐚𝐥𝐬; 𝐖𝐞'𝐫𝐞 𝐬𝐡𝐚𝐩𝐢𝐧𝐠 𝐭𝐡𝐞 𝐟𝐮𝐭𝐮𝐫𝐞 𝐨𝐟 𝐃𝐞𝐬𝐢 𝐜𝐮𝐢𝐬𝐢𝐧𝐞.</h1>
+   
+    <button class="order_food" onclick="goToPage()">Order Food</button>
+
+<script>
+    function goToPage() {
+        window.location.href = "/menu"; // Replace "menu.html" with the path to the page on your computer
+    }
+</script>
+
+</div>
+  </div>
+  <div style="margin-top: 160px;background-color: rgb(214, 209, 209);  padding-top: 75px;  width : 100%; height: 1200px;">
+    <h1 class="specail" style="font-size: 30px; text-align: center; color: rgb(39, 38, 38); font-family: Arial Black;">SPECIALS</h1>
+    <div class="row">
+        <div class="col-sm-6 " >
+            <div class="special_div" style="  background-image: url('/pics/biryani_in_spe.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;">
+            <h1 class="spe_text" >𝐂𝐡𝐢𝐜𝐤𝐞𝐧                        
+                𝐁𝐈𝐑𝐘𝐀𝐍𝐈</h1>
+            <button class="special_button" onclick="window.location.href='/menu#biryani-menu'"> 𝗢𝗿𝗱𝗲𝗿 𝗡𝗼𝘄 </button></div>
+             
+        </div>
+       
+        <div class="col-sm-6 " >
+            <div class="special_div" style="  background-image: url('/pics/Chicken_Karahi-spe.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;">
+            <h1 class="spe_text">𝐂𝐡𝐢𝐜𝐤𝐞𝐧                        
+                𝐊𝐀𝐑𝐀𝐇𝐈</h1>
+            <button class="special_button" onclick="window.location.href='/menu#chicken_menu'">𝗢𝗿𝗱𝗲𝗿 𝗡𝗼𝘄</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 " >
+            <div class="special_div" style="  background-image: url('/pics/Aloo-Paratha-4.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;">
+            <h1 class="spe_text">𝘼𝙡𝙤𝙤                        
+                𝐏𝐀𝐑𝐀𝐓𝐇𝐀</h1>
+            <button class="special_button" onclick="window.location.href='/menu#aloo_paratha'">𝗢𝗿𝗱𝗲𝗿 𝗡𝗼𝘄</button></div>
+             
+        </div>
+       
+        <div class="col-sm-6 " >
+            <div class="special_div" style="  background-image: url('/pics/Kadhi-pakora-1-spe.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;">
+            <h1 class="spe_text">𝙆𝙪𝙧𝙧𝙮                        
+                𝐏𝐀𝐊𝐎𝐑𝐀</h1>
+            <button class="special_button" onclick="window.location.href='/menu#kari_pakora'">𝗢𝗿𝗱𝗲𝗿 𝗡𝗼𝘄</button></div>
+             
+        </div>
+    </div>
+    
+
+</div>
+<section class="delivery-section">
+    <div class="auto-container">
+    <div class="row clearfix"> 
+    <!-- Image Column -->
+    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+    <div class="inner-column wow slideInLeft animated" data-wow-delay="0ms"
+    data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: Oms; animation-name: slideInLeft;">
+    <div class="image" style="margin-left: 30px;">
+    <img src="/pics/delivery.png" alt>
+    </div>
+    </div>
+    </div>
+    <!-- Content Column -->
+    <div class="content-column col-lg-6 col-md-12 col-sm-12">
+    <div class="inner-column" style="margin-top: 130px;">
+    <div class="title">We Guaranttee</div>
+    <h1 style="font-weight: 900; color: #ffffff; font-size: 60px;">Fast Delivery</h1>
+    <div style="color: white; font-size: larger;"> 
+    <p>Feeling hungry? Order Online for fastest delivery.</p>
+    </div>
+    <a href="/menu" data-toggle="modal" data-target="#exampleModal"
+    class="theme-btn btn-style-three">
+    
+    <span class="order_food"onclick="window.location.href='/menu'" style="position: relative; top: 30px; right: 100px; padding-top: 20px; padding-bottom: 20px; padding-left: 50px; padding-right: 50px; cursor:pointer;">Order Online</span>
+    </a>
+    </div>
+    </div>
+ 
+    </div>
+    </div>
+    </section>
+    <div class="footer">
+        <h3 style="font-family: 'Cooper Black'; position: relative; top: 30px; left: -628px;">Desi Ventures</h3>
+        <nav>
+            <ul>
+                <li><a href="/contact">Delivery Hours</a></li>
+                <li><a href="/contact">Delivery Location</a></li>
+                <li><a href="/contact">Store Timngs</a></li>
+                <li><a href="/contact">About Us</a></li>
+                <li><a href="/auth/login">My Profile</a></li>
+            </ul>
+        </nav>
+        <br><h3 class="head_text" style=" font-weight: 500; font-size: 23px; margin-left: 60px; position: relative; top: 01px">Contact us</h3>
+        <button type="button" style="border: none; margin-left:60px; position: relative; 
+        top: 07px; border: none; border-radius: 15px ; height: 45px; width: 09%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;font-weight: 700;  font-size: 18px;  " class="btn btn-default btn-sm">
+           <span ><img style="position: relative; right: 13px; height: 35px; width: 50px; padding-right: 0px; " src="/pics/WhatsApp-logo.png" alt="WhatsApp"></span> 
+           Chats</button>
+</div>
+       <button type="button" style="margin-left:200px;  position:absolute;top: 2642px;
+             border: none; border-radius: 15px ; height: 45px; width: 13%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 18px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-default btn-sm">
+               <span ><img style= "height: 18px; width: 35px; vertical-align: middle;" src="/pics/phone-removebg-preview.png"></span> 
+               +923094900205</button>
+               <img style="position:absolute; top: 2565px;margin-left:1110px;  width: 10%; height: 80px; " src="/pics/easypaisa-new-logo-0B6AAF8329-seeklogo.com-removebg-preview _real.png"
+               > 
+          <h3 class="head_text" style="position: relative; top: -230px; margin-left:450px; font-weight: 500; font-size: 23px;">Store Timings</h3>
+               <h3 class="head_text" style="position: relative; top: -226px; margin-left:450px; font-weight: 500; font-size: 22px;">65 green park 80 ft road Lahore</h3>
+               <h3 class="head_text" style="position: relative; top: -370px; margin-left:1100px; font-weight: 500; font-size: 20px;">Payment Method</h3>
+            
+              <div class="navbar_a">
+                <a href="#" class="navbar-link">Teams of Service</a>
+                <a href="#" class="navbar-link">Privacy Policy</a>
+                <a href="#" class="navbar-link">Return</a>
+                <div class="navbar-top-border"></div>
+                <div class="navbar-bottom-border"></div>
+              </div>
+        
+</body>
+</html>

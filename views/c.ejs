@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>address</title>
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #dddada;
+   
+    overflow-x: hidden; 
+    overflow-y: hidden;
+   
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding-top: 35px;
+    height: 105px; /* Adjusted height */
+}
+
+.logo img {
+    height: 60px; /* Adjust height as needed */
+    width: 60px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 6px;
+}
+
+.buttons button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.delivery-btn {
+    margin-left: 280px;
+    background-color: #FFDB58; /* Mustard color */
+    color: #000000;
+    position: relative;
+    top: -40px; /* Adjust this value as needed */
+    transition: background-color 0.3s;
+}
+.delivery-btn:hover{
+    background-color: rgb(240, 255, 37);
+}
+
+.pickup-btn {
+    margin-left: 10px;
+    color: #f7f6f4; /* Text color on hover */
+    background-color: #FFA500; /* Mustard color */
+    position: relative;
+    top: -40px; /* Adjust this value as needed */
+    transition: width 0.3s;
+}
+.pickup-btn:hover{
+    background-color: rgb(150, 111, 3);
+}
+
+.whatsapp img {
+    height: 38px; /* Adjust height as needed */
+    width: 47px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    margin-left: 750px;
+    position: relative;
+    top : -115px;
+}
+
+.add-to-cart-btn {
+    background-color: #FFDB58; /* Mustard color */
+    color: #0e0d0d; /* White text color */
+    padding: 10px 20px;
+    border: none; /* Remove border */
+    border-radius: 10px; /* Adjust border radius */
+    cursor: pointer;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: -160px;
+    transition: opacity 0.3s, size 0.3s;
+    position: relative;
+    top:-155px;
+    margin-left: 759px;
+    float: right;
+}
+.add-to-cart-btn:hover{
+    opacity: 0.6;
+}
+
+.all_pic{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 34%;
+    width: 85%;
+    border-radius: 19px;
+}
+.all_pic_second{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 800px;
+    width: 85%;
+    border-radius: 19px;
+    margin-right: 130px;
+    padding-top: 20px;
+}
+.head_text_a{
+  
+    color: #FFA500;
+    font-family:'Segoe UI Black';
+    font-size: large;
+    
+    padding-left: 40px;
+
+
+}
+.paragraph_text{
+   font-size: large;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 30px;
+   padding:  50px;
+
+}
+@media (max-width: 767px) {
+    .paragraph_text {
+        display: none;
+    }
+}
+.buttons button {
+border: none;
+/*background-color: transparent;*/
+cursor: pointer;
+font-size: 16px;
+
+padding: 8px 15px;
+border-radius: 5px;
+}
+.store-timings {
+    position: relative;
+    bottom: -60px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+.container {
+display: flex;
+flex-direction: column;
+min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+}
+
+
+
+.footer {
+background-color: #eeeaea;
+width: 100%;
+height: 350px;
+margin-left: 0px;
+margin-bottom: 0px;
+
+position: relative;
+    bottom: 0;
+    left: 0;
+    overflow-y: hidden;
+
+}
+
+.footer nav ul {
+    list-style-type: none; /* Remove default list style */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 50PX;
+    margin-left: 50PX;
+ 
+}
+
+.footer nav li {
+    margin-right: 23px; /* Adjust spacing between links */
+}
+
+.footer nav a {
+    text-decoration: none;
+    font-size: 19px;
+ font-weight:500;
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
+    color: rgb(122, 122, 122);
+    transition: color 0.3;
+    margin-top: -80px; /* Adjust top margin */
+}
+.footer nav a:hover{
+    color:#FFA500
+}
+
+.navbar_a {
+    width: 100%;
+height: 54px;
+background-color: transparent;
+
+padding-left: 900px;
+padding-top: 10px;
+
+
+
+}
+/* Style for the links */
+.navbar-link {
+display: inline-block;
+text-decoration: none;
+color: rgb(105, 104, 104);
+padding: 4px 8px;
+font-size: 12px;
+text-align: right;
+font-weight: 500; font-size: 20px;
+}
+/* Style for top and bottom borders */
+.navbar-top-border,
+.navbar-bottom-border {
+content: "";
+position: absolute;
+width: 100%;
+height: 1px;
+background-color: #ccc;
+left: 0;
+}
+.navbar-top-border {
+top: 0;
+}
+.navbar-bottom-border {
+bottom: 0;
+}
+.all_pic{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 34%;
+    width: 85%;
+    border-radius: 19px;
+}
+.all_pic_second{
+    background-color: white;
+    margin-left: 70px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 800px;
+    width: 85%;
+    border-radius: 19px;
+    margin-right: 130px;
+    padding-top: 20px;
+}
+.head_text_a{
+  
+    color: #FFA500;
+    font-family:'Segoe UI Black';
+    font-size: large;
+    
+    padding-left: 40px;
+
+
+}
+.paragraph_text{
+   font-size: large;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 30px;
+   padding:  50px;
+
+}
+@media (max-width: 767px) {
+    .paragraph_text {
+        display: none;
+    }
+}
+.buttons button {
+border: none;
+/*background-color: transparent;*/
+cursor: pointer;
+font-size: 16px;
+
+padding: 8px 15px;
+border-radius: 5px;
+}
+.store-timings {
+    position: relative;
+    bottom: -60px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+.clearfix::after {
+content: "";
+display: table;
+clear: both;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <div class="logo">
+                <img style="position: sticky;" src="/pics/cooking_page-0001.jpg" alt="Logo">
+                
+            </div>
+            <h7 style="font-size: 15px; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">Desi Ventures<h7>
+                <br><h7 style="color: #06660e; font-size: 17px; 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                 white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">Open<h7>
+              <h7 style= "color: #000000;font-size: 14px; font-family: none; white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">09:00 AM - 09:00 PM </h7>
+        
+            <div class="buttons">
+                <button class="delivery-btn">Delivery</button>
+                <button class="pickup-btn">Pick Up</button>
+            </div>
+            <button type="button" style="margin-left: 490px; position: relative;
+             top: -77px; border: none; border-radius: 15px ; height: 38px; width: 10%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 15px; font-family:Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                <span ><span class="glyphicon glyphicon-map-marker"></span> 
+                  Lahore</button>
+
+                  <button type="button" style="margin-left: 230px; margin-right: 10px; position: relative;
+                  top: -78px; border: none; border-radius: 15px ; height: 40px; width: 17%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 15px; font-family:Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                     <span ><img style="height: 18px; width: 35px; vertical-align: middle;" src="/pics/phone-removebg-preview.png"></span> 
+                     +923094900205</button>    
+
+            <div class="whatsapp">
+                <a href="https://wa.me/yourphonenumber"><img src="/pics/WhatsApp-logo.png" alt="WhatsApp"></a>
+            </div>
+            
+            <button class="add-to-cart-btn">Add to Cart</button>
+    
+    </header>
+    <div class="row"> <!-- Start of row -->
+        <div class="col-sm-4" style="margin-top: 110px;"> <!-- First column -->
+            <div class="all_pic">
+                <div>
+                    <img src="/pics/cooking_page-0001.jpg" style="border-radius: 16px; height: 120px; margin-top: 33px; margin-left: 120px; margin-bottom: 33px;">
+                </div>
+                <h2 style="font-family: 'Cooper Black'; margin-left:75px; margin-top: 40px; padding-bottom: 30px;">Desi Ventures</h2>
+            </div>
+        </div> <!-- End of first column -->
+      
+        <div class="col-sm-8" style="margin-top: 110px;"> <!-- Second column -->
+            <div class="all_pic_second">
+                <h7 class="head_text_a">About us</h7>
+                <br> 
+                <h7 class="paragraph_text">.</h7>
+                <br>
+                <h7 class="head_text_a">Phone Number</h7>
+                <br> 
+               <button type="button" style="margin-left: 30px; position: relative; top: 15px; border: none; border-radius: 15px; height: 40px; width: 25%; font-size: 18px; font-family: Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                    <span ><img style="height: 18px; width: 35px; " src="/pics/phone-removebg-preview.png"></span> 
+                    +93 3364488188
+                </button> 
+                <br>
+              
+                <h7 class="paragraph_text" style="font-size: 25px; margin-top: 10px; display: none;">65 green park 80 ft road Lahore</h7>
+                <br> <h7 class="head_text_a" style="padding-top: 950px;">Address</h7>
+                <br>
+                <h7 class="paragraph_text" style="position: relative; font-size: 20px;bottom: -10px;">65 green park 80 ft road Lahore</h7>
+                <br> <h7 class="head_text_a" style="position: relative; bottom: -30px;">WhatApp Number</h7>
+                <br><button type="button" style="margin-left: 30px; position: relative; bottom:-40px;  border: none; border-radius: 15px; height: 40px; width: 30%; font-size: 18px; font-family: Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                    <span ><img style="height: 35px; width: 55px; " src="/pics/WhatsApp-logo.png" alt="WhatsApp"></span> 
+                    +93 3364488188
+                </button> 
+                <br> <h7 class="head_text_a" style="position: relative; bottom: -60px;">Store Timings</h7>
+                <br>
+              
+                <div class="dropdown" style="margin-left: 550px; margin-top: 33px; ">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+                    style="width: 164px; border: none; border-radius: 28px; background-color: #FFA500;">
+                        Open Now
+                        <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-content" style="height: 800px; width: 750px;position: relative; right: 545px; background-color: white;">
+                        <p><span class="bold" style="font-size: 16px; margin-top: 14px; margin-left: 30px;">Monday:</span> </p><p style="font-size: 16px; margin-top: 9px; margin-left: 30px;">12pm - 10am</p>
+                        <p><span class="bold" style="font-size: 16px; margin-top: 14px; margin-left: 30px;">Tuesday:</span> </p><p style="font-size: 16px; margin-top: 9px; margin-left: 30px;">12pm - 10am</p>
+                        <p><span class="bold" style="font-size: 16px; margin-top: 14px; margin-left: 30px;">Wednesday:</span> </p><p style="font-size: 16px; margin-top: 9px; margin-left: 30px;">12pm - 10am</p>
+                        <p><span class="bold" style="font-size: 16px; margin-top: 14px; margin-left: 30px;">Thurday:</span> </p><p style="font-size: 16px; margin-top: 9px; margin-left: 30px;">12pm - 10am</p>
+                        <p><span class="bold" style="font-size: 16px; margin-top: 14px; margin-left: 30px;">Friday:</span> </p><p style="font-size: 16px; margin-top: 9px; margin-left: 30px;">12pm - 10am</p>
+                        <p><span class="bold" style="font-size: 16px; margin-top: 14px; margin-left: 30px;">Saturday:</span> </p><p style="font-size: 16px; margin-top: 9px; margin-left: 30px;">12pm - 10am</p>
+                        <p><span class="bold" style="font-size: 16px; margin-top: 14px; margin-left: 30px;">Sunday:</span> </p><p style="font-size: 16px; margin-top: 9px; margin-left: 30px;">12pm - 10am</p>
+                        
+                    </div>
+                </div>
+                
+            
+            <br> <h7 class="head_text_a" style="position: relative; bottom: -60px;">Delivery Timings</h7>
+            <br>
+          
+            <div class="dropdown" style="margin-left: 550px; margin-top: 33px; ">
+                <button 
+                style="width: 164px;height: 26px; border: none; border-radius: 28px; background-color: #FFA500;">
+                    Open Now
+                </button>
+                <table style=" border-radius: 36px; width: 710px; height: 160px; margin-top: 20px; border-collapse: collapse; border: 1px solid black; position: relative; right: 530px;">
+                    <tr style="height: 60px;">
+                        <td style="border-right: 1px solid black; "><span class="bold" style="font-size: 17px; margin-left: 18px;">Mon</span></td>
+                        <td style="border-right: 1px solid black;"><span class="bold" style="font-size: 17px; margin-left: 18px;">Tues</span></td>
+                        <td style="border-right: 1px solid black;"><span class="bold" style="font-size: 17px; margin-left: 18px;">Wed</span></td>
+                        <td style="border-right: 1px solid black;"><span class="bold" style="font-size: 17px; margin-left: 18px;">Thur</span></td>
+                        <td style="border-right: 1px solid black;"><span class="bold" style="font-size: 17px; margin-left: 18px;">Fri</span></td>
+                        <td style="border-right: 1px solid black;"><span class="bold" style="font-size: 17px; margin-left: 18px;">Sat</span></td>
+                        <td><span class="bold" style="font-size: 17px; margin-left: 18px;">Sun</span></td>
+                    </tr>
+                    <tr style="border-top: 1px solid black; border-bottom: 1px solid black;">
+                        <td style="border-right: 1px solid black; font-size: 16px;">12pm - 10am</td>
+                        <td style="border-right: 1px solid black;font-size: 16px;">12pm - 10am</td>
+                        <td style="border-right: 1px solid black;font-size: 16px;">12pm - 10am</td>
+                        <td style="border-right: 1px solid black;font-size: 16px;">12pm - 10am</td>
+                        <td style="border-right: 1px solid black;font-size: 16px;">12pm - 10am</td>
+                        <td style="border-right: 1px solid black;font-size: 16px;">12pm - 10am</td>
+                        <td style="font-size: 16px;">12pm - 10am</td>
+                    </tr>
+                </table>
+                <br> <h7 class="head_text_a" style="position: relative; bottom: -20px; right: 555px;">Delivery Location</h7>
+              <br>  <h7 class="paragraph_text" style="position: relative;bottom: -40px; right: 550px;  width: 40%;height: 25px;   font-size: 22px; font-family:'Cooper Black';">We only Deliver in Lahore</h7>
+        </div>  <!-- End of second column -->
+    
+    </div>
+</div>
+
+<!-- End of row -->
+<div class="clearfix"></div>
+
+<div class="footer">
+    <h3 style="font-family: 'Cooper Black'; margin-left: 50px; position: relative; top: 30px">Desi Ventures</h3>
+    <nav>
+        <ul>
+            <li><a href="#">Delivery Hours</a></li>
+            <li><a href="#">Delivery Location</a></li>
+            <li><a href="#">Store Timings</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">My Profile</a></li>
+        </ul>
+    </nav>
+    <br>
+    <h3 class="head_text" style="font-weight: 500; font-size: 23px; margin-left: 50px; position: relative; top: 1px">Contact us</h3>
+    <button type="button" style="border: none; margin-left: 60px; position: relative; top: 7px; border-radius: 15px; height: 45px; width: 9%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); font-weight: 700; font-size: 18px;" class="btn btn-default btn-sm">
+        <span><img style="position: relative; right: 13px; height: 35px; width: 50px; padding-right: 0px;" src="/pics/WhatsApp-logo.png" alt="WhatsApp"></span> 
+        Chats
+    </button>
+    <button type="button" style="margin-left: 200px; position: relative; top: -165px; border: none; border-radius: 15px; height: 45px; width: 13%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-default btn-sm">
+        <span><img style="height: 18px; width: 35px; vertical-align: middle;" src="/pics/phone-removebg-preview.png"></span> 
+        +923094900205
+    </button>
+    <h3 class="head_text" style="position: relative; top: -260px; margin-left: 450px; font-weight: 500; font-size: 23px;">Store Timings</h3>
+    <h3 class="head_text" style="position: relative; top: -260px; margin-left: 450px; font-weight: 500; font-size: 22px;">65 green park 80 ft road Lahore</h3>
+    <h3 class="head_text" style="position: relative; top: -410px; margin-left: 1145px; font-weight: 500; font-size: 20px;">Payment Method</h3>
+    <img style="position: absolute; top: 1000px; margin-left: 1150px; width: 10%; height: 80px;" src="/pics/easypaisa-new-logo-0B6AAF8329-seeklogo.com-removebg-preview_real.png">
+  <!----  <div class="navbar_a">
+        <a href="#" class="navbar-link">Terms of Service</a>
+        <a href="#" class="navbar-link">Privacy Policy</a>
+        <a href="#" class="navbar-link">Return</a>
+        <div class="navbar-top-border"></div>
+        <div class="navbar-bottom-border"></div>
+    </div>----->
+</div>
+
+               
+</body>
+</html>

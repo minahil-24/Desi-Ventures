@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="Menu.css">
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.sticky-nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+   padding-top: 35px;
+   height: 105px; /* Adjusted height */
+}
+
+.logo img {
+    height: 60px; /* Adjust height as needed */
+    width: 60px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 6px;
+
+}
+
+.buttons button {
+    border: none;
+    /*background-color: transparent;*/
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.buttons button_w {
+    
+    /*background-color: transparent;*/
+    cursor: pointer;
+    padding-left: 0px;
+  
+}
+.delivery-btn {
+    margin-left: 280px;
+    background-color: #FFDB58; /* Mustard color */
+    color: #000000;
+    position: relative;
+    top: -40px; /* Adjust this value as needed */
+    transition: background-color 0.3s;
+}
+.delivery-btn:hover{
+    background-color: rgb(240, 255, 37);
+}
+
+.pickup-btn {
+    margin-left: 10px;
+   /* border: 1px solid #FFA500;  Border color for Pickup button */
+   
+    color: #f7f6f4; /* Text color on hover */
+    background-color: #FFA500; /* Mustard color */
+   /* transition: background-color 0.3s ease;  Smooth transition */
+   position: relative;
+   top: -40px; /* Adjust this value as needed */
+   transition: width 0.3s;
+}
+.pickup-btn:hover{
+    background-color: rgb(150, 111, 3);
+}
+
+
+
+.whatsapp img {
+    height: 41px; /* Adjust height as needed */
+    width: 47px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    margin-left: 750px;
+    position: relative
+    ;
+    top : -115px;
+    
+}
+
+.add-to-cart-btn {
+    
+    background-color: #FFDB58; /* Mustard color */
+    color: #0e0d0d; /* White text color */
+    padding: 10px 20px;
+    border: none; /* Remove border */
+    border-radius: 10px; /* Adjust border radius */
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: -210px;
+    transition: opacity 0.3s, size 0.3s;
+    position: relative;
+    top:-163px;
+    float: right;
+}
+.add-to-cart-btn:hover{
+    opacity: 0.6;
+  
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .navbar-menu {
+            display: none;
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 999;
+        }
+
+        .navbar-menu a {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #000;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .menu_nav {
+        font-family: 'Arial Rounded MT Bold';
+        background-color: transparent;
+        color: rgb(44, 44, 44);
+        font-size: 23px;
+        margin-top: -04px;
+        width: 150px;
+        transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+        align-items: center;
+    }
+
+    .menu_nav:hover {
+        background-color: #FFA500;
+        color: #ffffff;
+        border-radius: 12px;
+    }
+
+    /* Special styling for "Karahi" */
+    .menu_nav.active {
+        background-color: #FFA500;
+        color: #f0f0f0;
+        border-radius: 12px;
+    }
+       .navigation {
+    margin-left: 50px;
+    width: 90%;
+    min-height: 20px; /* Set a minimum height to ensure it's visible */
+    background-color: transparent;
+    border: 1px solid #444242e8;
+    border-radius: 36px; /* Adjust the border radius as needed */
+  
+ 
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 9999; 
+}
+.all_pic{
+    margin-left: 30px;
+    margin-top: 15px;
+    box-shadow:  4px 4px 4px rgba(0, 0, 0, 0.1);
+    height : 70%;
+    width: 90%;
+   
+      
+      border-radius: 19px;
+}
+.all_pic_heading_name{
+    margin: 0px;
+     margin-left: 10px;
+      position: relative;
+       top: -65px;
+        font-family: 'Franklin Gothic Heavy';
+         font-size: 25px;
+ 
+
+}
+.all_pic_heading_name_p{
+    margin: 0px;
+     margin-left: 178px;
+      position: relative;
+       top: -10px;
+        font-family: 'Franklin Gothic Heavy';
+         font-size: 25px;
+}
+.footer{
+  
+    background-color: #eeeaea;
+    width: 100%;
+    height :350px;
+    margin-top: 30px;
+}
+.footer nav ul {
+            list-style-type: none; /* Remove default list style */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-top: 50PX;
+            margin-left: 50PX;
+        }
+
+        .footer nav li {
+            margin-right: 23px; /* Adjust spacing between links */
+        }
+
+        .footer nav a {
+            text-decoration: none;
+            font-size: 19px;
+         font-weight:500;
+            border: none; /* Remove border */
+            background-color: transparent; /* Transparent background */
+            color: rgb(122, 122, 122);
+            transition: color 0.3;
+        }
+        .footer nav a:hover{
+            color:#FFA500
+        }
+
+        .navbar_a {
+            width: 100%;
+    height: 54px;
+    background-color: transparent;
+    position: relative;
+bottom: 103px;
+    padding-left: 900px;
+    padding-top: 10px;
+
+ 
+  }
+  /* Style for the links */
+  .navbar-link {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(105, 104, 104);
+    padding: 4px 8px;
+    font-size: 12px;
+    text-align: right;
+    font-weight: 500; font-size: 20px;
+    position: relative;
+    
+  }
+  /* Style for top and bottom borders */
+  .navbar-top-border,
+  .navbar-bottom-border {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    left: 0;
+  }
+  .navbar-top-border {
+    top: 0;
+  }
+  .navbar-bottom-border {
+    bottom: 0;
+  }
+  .slider {
+  
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            background-color: white;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .slider .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: #111;
+            text-decoration: none;
+
+        }
+
+        .slider .header {
+            text-align: center;
+            font-size: 29px;
+            color: rgb(73, 72, 72);
+            margin-bottom: 20px;
+        }
+
+        .slider ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .slider ul li {
+            margin: 15px 0;
+        }
+
+        .slider ul li a {
+            width: 350px;
+            text-decoration: none;
+            font-size: 25px;
+            color: rgb(73, 72, 72);
+            transition: background-color 0.3s, color 0.3s;
+            padding: 10px 20px;
+            display: block;
+          float: left;
+        }
+
+        .slider ul li a:hover {
+            background-color: rgb(226, 226, 226);
+            color: rgb(73, 72, 72);
+            cursor: pointer;
+        }
+
+        #imageDiv {
+            cursor: pointer;
+        }
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            display: none;
+        }
+/* css for add to cart button slider*/
+.sidebar {
+    height: 100%;
+    width: 500px;
+    position:fixed;
+    top: 0;
+    right: -500px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s;
+    overflow: hidden;
+}
+
+.sidebar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: rgb(36, 36, 36);
+}
+
+.sidebar .header h2 {
+    margin: 0;
+}
+
+.sidebar .header .closeBtn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar .nav {
+    background-color: rgb(230, 229, 229);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar .nav .nav-item {
+    color: rgb(139, 139, 139);
+    font-weight: bold;
+}
+
+.sidebar .emptyCart {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(49, 49, 49);
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar.active {
+    right: 0;
+}
+.overlay {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+          
+            display: none;
+        
+        }
+
+        .overlay_add_cart {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+          
+            display: none;
+        
+        }
+
+        #sliderContainer {
+            position:fixed;
+            top: 0;
+            right: -500px;
+            width: 500px;
+            height: 800px;
+            background-color: #ffffff;
+            padding: 20px;
+            
+            transition: right 0.3s ease;
+            z-index: 4001;
+        }
+        #sliderContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #productImage {
+            max-width: 400px; /* Ensures the image does not exceed its container */
+        height: auto; /* Maintains aspect ratio */
+            margin-bottom: 10px;
+        }
+        #productName {
+            margin-bottom: 10px;
+        }
+        #productPrice {
+            margin-bottom: 10px;
+        }
+        #quantityControls {
+            position: relative, fixed;
+            display: flex;
+            justify-content: space-between;
+          
+            width: 200px;
+    height: 45px;
+ bottom: -175px;
+ left: -140px;
+
+        }
+        #quantity {
+            width: 50px;
+            text-align: center;
+            border: none ;
+            font-size:30px;
+       
+
+        }
+        #addToCartButton {
+    position:relative, fixed;
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 280px;
+    height: 45px;
+ bottom: -127px;
+ right: -150px;
+ 
+}
+
+        .closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+       
+
+         .checkout-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        .checkout-section .total-amount {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+
+
+
+
+
+
+         .checkout-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        .total-amount-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000000;
+            margin-left: 8px;
+        }
+
+ .total-amount {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000000;
+            margin-left: 17px;
+        }
+       #checkoutButton {
+        
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 500px;
+            height: 40px;
+            text-align: center;
+            display: none; /* Initially hidden */
+            position: fixed;
+            top:590px;
+       }
+            .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-item .product-name {
+            flex: 1;
+            color:#000000; 
+            margin-left: 20px;
+        }
+
+        .product-item .product-quantity {
+            width: 50px;
+            text-align: center;
+            color:#000000;
+            margin-right: 30px;
+        }
+
+        .product-item .product-amount {
+            width: 70px;
+            text-align: right;
+            color:#000000;
+            margin-right: 20px;
+        }
+       
+        .remove-button{
+            color: #000000;
+            font-size: smaller;
+            border: none;
+            border-radius: 33%;
+            margin-right: 14px;
+
+        }
+    </style>
+</head>
+<body>
+    <header style="position: sticky; ">
+        <nav class="sticky-nav">
+            <div class="logo">
+                <img style="position: sticky;" src="/pics/cooking_page-0001.jpg" alt="Logo">
+                
+            </div>
+            <h7 style="font-size: 15px ; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">Desi Ventures<h7>
+                <br><h7 style="color: #06660e; font-size: 17px; 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                 white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">Open<h7>
+              <h7 style= "color: #000000;font-size: 14px; font-family: none; white-space: nowrap; padding-top: 10px; margin-right: 530px; margin-bottom:-100px;">11:00 AM - 09:00 PM </h7>
+        
+            <div class="buttons">
+                <button class="delivery-btn" onclick="window.location.href='/contact'">Delivery</button>
+                <button class="pickup-btn" onclick="window.location.href='/contact'">Pick Up</button>
+            </div>
+            <button type="button" style="margin-left: 490px; position: relative;
+             top: -77px; border: none; border-radius: 15px ; height: 38px; width: 10%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 15px; font-family:Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                <span ><span class="glyphicon glyphicon-map-marker" onclick="window.location.href='/contact'"></span> 
+                  Lahore</button>
+
+                  <button type="button" style="margin-left: 230px; margin-right: 10px; position: relative;
+                  top: -78px; border: none; border-radius: 15px ; height: 40px; width: 17%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 15px; font-family:Arial, Helvetica, sans-serif;" class="btn btn-default btn-sm">
+                     <span onclick="window.location.href='/contact'" ><img style="height: 18px; width: 35px; vertical-align: middle;" src="/pics/phone-removebg-preview.png"></span> 
+                     +923094900205</button>    
+
+            <div class="whatsapp">
+                <a href="https://api.whatsapp.com/"><img src="/pics/WhatsApp-logo.png" alt="WhatsApp"></a>
+            </div>
+            
+            <button id="cartButton" class="add-to-cart-btn">My Cart</button>
+            <div id="cartSidebar" class="sidebar">
+                <div class="header">
+                    <h2 style="color: #fdba3f;">Your Cart</h2>
+                    <span id="totalItems">Total items: <span id="itemCount">0</span></span>
+                    <span class="closeBtn" id="closeButton">&times;</span>
+                </div>
+                <div class="nav">
+                    <span class="nav-item" style="margin-right:140px;">Product Name</span>
+                    <span class="nav-item">Quantity</span>
+                    <span class="nav-item" style="margin-left: 13px;">Amount</span>
+                </div>
+                <div id="empty" class="emptyCart">
+                    Your cart is empty
+                </div>
+                <div id="cartItems"></div>
+                <div class="checkout-section">
+                    <div class="total-amount-text">Total Amount:</div>
+                    <div class="total-amount">0.00</div>
+                </div>
+                <button id="checkoutButton" onclick="window.location.href='/placeorder'">Check Out</button>
+            </div>
+          
+            <div id="overlay_a" class="overlay_add_cart" onclick="closeSlider()"></div>
+            
+           
+        
+            <script>
+           
+    
+</script>p
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </header>
+    <div ><img style="margin-bottom: 13px; width:100%; height:320px"src="/pics/pixelcut-export.png"></div>
+    
+    <nav class="navbar navbar-inverse" style="background-color: #fffefc; box-shadow:  0 2px 4px rgba(0, 0, 0, 0.1); border-radius: none; border:none">
+       
+            <div class="navbar-header">
+                
+              
+            </div>
+           
+                <ul class="nav navbar-nav" style="height: 50px; ">
+                    <button  style=" background-color:transparent; border: none; width: 100px; height: 100px; float: left; margin-left: 40px;">
+                        <img id="imageDiv" src="/pics/images_toggle-removebg-preview.png" style="width: 40%; height: 40%;  margin-bottom: 90px ;" alt="Image">
+                    </button>
+                    <div id="slider" class="slider">
+                        <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+                        <div class="header">Menu</div>
+                        <ul>
+                            <li><a href="#" class="menu_nav">Desi Zaiqa</a></li>
+                            <li><a href="#" class="menu_nav">Biryani</a></li>
+                            <li><a href="#" class="menu_nav">Fish</a></li>
+                            <li><a href="#" class="menu_nav">Sabzi</a></li>
+                        </ul>
+                    </div>
+                    <div id="overlay" class="overlay" onclick="closeSlider()"></div>
+                    <script>
+                        document.getElementById("imageDiv").onclick = function() {
+                            document.getElementById("slider").style.width = "350px";
+                            document.getElementById("overlay").style.display = "block";
+                           
+                        }
+                
+                        document.getElementById("closeBtn").onclick = function() {
+                            document.getElementById("slider").style.width = "0";
+                            document.getElementById("overlay").style.display = "none";
+                            
+                        }
+                    </script>
+                  
+                  <li >
+                    <a href="Menu.ejs#chicken_menu" class="menu_nav active" style="margin-left: 60px;">Karahi</a>
+                </li>
+                <li >
+                    <a href="Menu.ejs#kari_pakora" class="menu_nav">Desi Zaiqa</a>
+                </li>
+                <li >
+                    <a href="Menu.ejs#biryani-menu" class="menu_nav">Biryani</a>
+                </li>
+                <li >
+                    <a href="" class="menu_nav">Fish</a>
+                </li>
+                <li >
+                    <a href="Menu.ejs#aloo_paratha" class="menu_nav">Sabzi</a>
+                </li>
+                
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <nav class="navigation" style="display: flex; align-items: center;">
+        <span class="glyphicon glyphicon-search" style="padding: 14px 16px;"></span>
+        <input id="searchInput" type="text" placeholder="Search Menu items" style="font-family: 'Arial Rounded MT Bold'; font-size: 20px; border: none; ">
+        <div style="margin-left: 880px; background-color: #FFA500; border-radius: 39px;">
+            <img style=" position: relative; left: 0px; width: 35px; height: 35px; border-radius: 26px;"src="/pics/white_arrow_canva-removebg-preview.png">
+        </div>
+    </nav>
+    
+
+    <div id="sliderContainer">
+        <span class="closeButton" onclick="hideSlider()">✖</span>
+        <div id="sliderContent">
+            <div id="headName" class="all_pic_heading_name" style="position: relative; align-items: center; top: -10px;">Desi Vectures</div>
+            <img id="productImage" src="" alt="Product Image">
+            <div id="productName" class="all_pic_heading_name" style="position: relative; left:-167px; top: 50px;"></div>
+            <div id="productPrice" class="all_pic_heading_name_p" style="position: relative; right:-80px; top: -0px;"></div>
+            <div id="quantityControls">
+                <button style="
+                background-color: #FFA500;
+                color: white;
+                border-radius: 50%;
+                border: none;
+                text-align: center;
+                width: 40px; /* Adjust width as needed */
+                height: 40px; /* Adjust height as needed */
+                font-size: 28px; /* Adjust font size as needed */
+                display: flex; /* To center content */
+                justify-content: center; /* To center content */
+                align-items: center; /* To center content */
+            " onclick="decrementQuantity()">-</button>
+            
+                <input type="number" id="quantity" value="1" min="1" max="15">
+                <button style="
+                background-color: #FFA500;
+                color: white;
+                border-radius: 50%;
+                border: none;
+                text-align: center;
+                width: 40px; /* Adjust width as needed */
+                height: 40px; /* Adjust height as needed */
+                font-size: 28px; /* Adjust font size as needed */
+                display: flex; /* To center content */
+                justify-content: center; /* To center content */
+                align-items: center; /* To center content */
+            "  onclick="incrementQuantity()">+</button>
+            </div>
+            <button id="addToCartButton" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="overlay_B" class="overlay" onclick="closeSlider()"> </div>
+
+<script>
+function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    var searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', function(event) {
+        if (event.keyCode === 13) {  // Enter key
+            var searchTerm = searchInput.value.trim().toLowerCase();
+            if (searchTerm !== '') {
+                var sectionId = searchTerm.replace(/\s+/g, '_');  // Convert spaces to underscores
+                scrollToSection(sectionId);
+            }
+        }
+    });
+
+
+
+  // Handle cart button click
+document.getElementById('cartButton').onclick = function() {
+    document.getElementById('cartSidebar').classList.add('active');
+    document.getElementById("overlay_a").style.display = "block";
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+};
+
+// Handle cart close button click
+document.getElementById('closeButton').onclick = function() {
+    document.getElementById('cartSidebar').classList.remove('active');
+    document.getElementById("overlay_a").style.display = "none";
+    document.body.style.overflow = ''; // Re-enable scrolling
+};
+
+// Update item count and change background color when "Add to Cart" button is clicked
+let itemCount = 0;
+let totalAmount = 0;
+document.querySelector('.add-to-cart-btn').onclick = function() {
+    document.getElementById('cartSidebar').classList.add('active'); // Open cart sidebar
+    // updateItemCount(++itemCount); // Update item count
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+};
+
+// Function to update item count
+function updateItemCount(count) {
+    itemCount += count;
+    document.getElementById('itemCount').textContent = itemCount;
+     showempty(count);
+}
+
+function showempty(count) {
+            if (count === 0) {
+                document.getElementById('empty').style.display = "block";
+                document.getElementById('checkoutButton').style.display = "none";
+            } else { 
+                var namep=document.getElementById('productName').textContent;
+                var pricep = parseFloat(document.getElementById('productPrice').textContent.replace("Price: ", ""));
+            
+                document.getElementById('empty').style.display = "none";
+                document.getElementById('checkoutButton').style.display = "block";
+                addProductToCart(namep, count, pricep);   
+            }
+        }
+        
+        function updateTotalAmount(price) {
+    totalAmount += price;
+    document.querySelector('.total-amount').textContent = 'Rs.' + totalAmount.toFixed(2);
+
+    // Send the updated total amount to the server
+    fetch('/update-total-amount', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ totalAmount: totalAmount })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Total amount updated successfully on server:', data);
+    })
+    .catch((error) => {
+        console.error('Error updating total amount on server:', error);
+    });
+}
+        function DeductTotalAmount(price) {
+            totalAmount - price;
+            document.querySelector('.total-amount').textContent = 'Rs.' + totalAmount.toFixed(2);
+        }
+        function addProductToCart(name, quantity, price) {
+    const cartItems = document.getElementById('cartItems');
+    const existingItems = cartItems.getElementsByClassName('product-item');
+    let productExists = false;
+
+    for (let i = 0; i < existingItems.length; i++) {
+        const productName = existingItems[i].getElementsByClassName('product-name')[0].textContent;
+        if (productName === name) {
+            const productQuantity = existingItems[i].getElementsByClassName('product-quantity')[0];
+            const productAmount = existingItems[i].getElementsByClassName('product-amount')[0];
+
+            let newQuantity = parseInt(productQuantity.textContent) + quantity;
+            let newAmount = newQuantity * price;
+
+            productQuantity.textContent = newQuantity;
+            productAmount.textContent = 'Rs.' + newAmount.toFixed(2);
+
+            updateTotalAmount(price * quantity);
+            productExists = true;
+            break;
+        }
+    }
+
+    if (!productExists) {
+        const productItem = document.createElement('div');
+        productItem.className = 'product-item';
+
+        const productName = document.createElement('div');
+        productName.className = 'product-name';
+        productName.textContent = name;
+
+        const productQuantity = document.createElement('div');
+        productQuantity.className = 'product-quantity';
+        productQuantity.textContent = quantity;
+
+        const productAmount = document.createElement('div');
+        productAmount.className = 'product-amount';
+        productAmount.textContent = 'Rs.' + (price * quantity).toFixed(2);
+
+        productItem.appendChild(productName);
+        productItem.appendChild(productQuantity);
+        productItem.appendChild(productAmount);
+        cartItems.appendChild(productItem);
+
+        updateTotalAmount(price * quantity);
+    }
+}
+function showSlider(image, price, name) {
+    var sliderContainer = document.getElementById("sliderContainer");
+    var productImage = document.getElementById("productImage");
+    var productName = document.getElementById("productName");
+    var productPrice = document.getElementById("productPrice");
+    var quantityInput = document.getElementById("quantity");
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+    productImage.src = image;
+    productName.textContent = name;
+    productPrice.textContent = "Price: " + price.toFixed(2);
+    quantityInput.value = 1;
+    document.getElementById("overlay").style.display = "block";
+    sliderContainer.style.right = "0";
+    document.body.style.backgroundColor = "#cccccc";
+}
+
+function hideSlider() {
+    var sliderContainer = document.getElementById("sliderContainer");
+    sliderContainer.style.right = "-500px";
+    document.body.style.backgroundColor = "#f4f4f4";
+    document.body.style.overflow = ''; // enable scrolling
+    document.getElementById("overlay").style.display = "none";
+}
+
+function decrementQuantity() {
+    var quantityInput = document.getElementById("quantity");
+    var quantity = parseInt(quantityInput.value);
+    if (quantity > 1) {
+        quantityInput.value = quantity - 1;
+    }
+}
+
+function incrementQuantity() {
+    var quantityInput = document.getElementById("quantity");
+    var quantity = parseInt(quantityInput.value);
+    if (quantity < 15) {
+        quantityInput.value = quantity + 1;
+    }
+}
+
+function addToCart() {
+    hideSlider();
+    var quantity = parseInt(document.getElementById("quantity").value);
+    var name = document.getElementById("productName").textContent;
+    var price = parseFloat(document.getElementById("productPrice").textContent.replace("Price: ", ""));
+    var totalAmount = quantity * price;
+ // Create a new Date object
+ let currentDateTime = new Date();
+
+// Get the current date and time as a localized string
+let formattedDateTime = currentDateTime.toLocaleString();
+
+console.log(formattedDateTime); // Output: "6/15/2024, 2:05:30 PM" (or the current date and time based on locale)
+    fetch('/add-to-cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, quantity, price, totalAmount })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        updateItemCount(quantity);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+
+
+
+</script>
+
+
+
+
+    <h2 id="chicken_menu" style="font-family: 'Cooper Black'; margin-left: 50px;">Desi Karahi</h2>
+    <div class="row">
+        <% foodItems.forEach(foodItem => { %>
+            <div class="col-sm-4">
+                <div class="all_pic">
+                    <div>
+                        <img src="<%= foodItem.imagePath %>" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                        <h7 class="all_pic_heading_name"><%= foodItem.name %></h7>
+                    </div>
+                    <h7 class="all_pic_heading_name_p">Rs.<%= foodItem.price %>/-</h7>
+                </div>
+                <div onclick="showSlider('<%= foodItem.imagePath %>', '<%= foodItem.price %>', '<%= foodItem.name %>')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                    <img style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+                </div>
+            </div>
+        <% }); %>
+        
+    
+    
+        <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+            <div class="all_pic">
+                <div>
+                    <img src="/pics/chicken_qorma.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                    <h7 class="all_pic_heading_name">Chicken Qorma</h7>
+                </div>
+                <h7 class="all_pic_heading_name_p">Rs.550/-</h7>
+            </div>
+            <div onclick="showSlider('/pics/chicken_qorma.jpg', 550, 'Chicken Qorma')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <div class="row">
+        <div class="col-sm-4"> <!-- This will take up 6 out of 12 columns -->
+            <div class="all_pic">
+                <div>
+                    <img src="/pics/Chicken_Kofta_Curry_Makhani_recipe-2.jpg" style="height: 130px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                    <h7 class="all_pic_heading_name" >Chicken Kofta </h7>
+                </div>
+                <h7 class="all_pic_heading_name_p" style="margin-left: 190px;">Rs.300/-</h7>
+            </div>
+            <div style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                <img onclick="showSlider('E:/Subjects/Web Application Development/Chicken_Kofta_Curry_Makhani_recipe-2.jpg', 300, 'Chicken Kofta')" style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+            </div>
+        </div>
+        <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+            <div class="all_pic">
+                <div>
+                    <img src="/pics/beef-kofta-spe.jpeg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                    <h7 class="all_pic_heading_name">Beef Kofta 4pcs</h7>
+                   
+                </div>
+                <h7 class="all_pic_heading_name_p" style="margin-left: 190px;">Rs.400/-</h7>
+            </div>
+            <div onclick="showSlider('/pics/beef-kofta-spe.jpeg', 400, 'Beef Kofta 4pcs')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                <img  style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+            </div>
+        </div>
+       
+    </div>
+    
+
+
+
+
+    <h2 id="biryani-menu" style="font-family: 'Cooper Black'; margin-left: 50px; margin-top: 50px;">Desi Biryani</h2>
+    
+<div class="row">
+    <div class="col-sm-4"> <!-- This will take up 6 out of 12 columns -->
+        <div class="all_pic" >
+            <div>
+                <img src="/pics/tikka biryani.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Tikka Biryani</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p"> Rs.180/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/tikka biryani.jpg', 180, 'Tikka Biryani')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/biryani_in_spe.jpg" style="height: 111px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px; padding-top: 20px;">
+                <h7 class="all_pic_heading_name">Chicken Biryani</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p" style="margin-left: 210px;">Rs.180/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/biryani_in_spe.jpg', 180, 'Chicken Biryani')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/chiken pulao.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Chicken Polao</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p">Rs.180/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/chiken pulao.jpg', 180, 'Chicken Pulao')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+</div>
+    
+
+<h2 id="kari_pakora" style="font-family: 'Cooper Black'; margin-left: 50px; margin-top: 50px;">Desi Zaiqa</h2>
+<div class="row">
+    <div class="col-sm-4"> <!-- This will take up 6 out of 12 columns -->
+        <div class="all_pic" >
+            <div>
+                <img src="/pics/daal chawal.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Daal Chawal</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p"> Rs.180/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/daal chawal.jpg', 180, 'Daal Chawal')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/Kadhi-pakora-1-spe.webp" style="height: 111px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px; padding-top: 20px;">
+                <h7 class="all_pic_heading_name">Kari Pakora</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p" style="margin-left: 190px;">Rs.250/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/Kadhi-pakora-1-spe.webp', 250, 'Kari Pakora')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"  style="margin-top: -20px;"> <!-- This will also--->
+
+            <div class="all_pic">
+                <div>
+                    <img src="/pics/murgh chana.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                    <h7 class="all_pic_heading_name">Murgh Channe</h7>
+                </div>
+                <h7 class="all_pic_heading_name_p">Rs.100/-</h7>
+            </div>
+            <div onclick="showSlider('/pics/murgh chana.jpg', 100, 'Murgh Channe')"  style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-4"> <!-- This will take up 6 out of 12 columns -->
+            <div class="all_pic" >
+                <div>
+                    <img src="/pics/sada chana masala.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                    <h7 class="all_pic_heading_name">Sada Channe</h7>
+                    
+                </div>
+                <h7 class="all_pic_heading_name_p"> Rs.60/-</h7>
+            </div>
+            <div onclick="showSlider('/pics/sada chana masala.jpg', 60, 'Sada Channe')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+            </div>
+        </div>
+        <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+            <div class="all_pic">
+                <div>
+                    <img src="/pics/chicken_nihari_spe.jpg" style="height: 111px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px; padding-top: 20px;">
+                    <h7 class="all_pic_heading_name">Chicken Nihari</h7>
+                </div>
+                <h7 class="all_pic_heading_name_p" style="margin-left: 210px;">Rs.350/-</h7>
+            </div>
+            <div onclick="showSlider('/pics/chicken_nihari_spe.jpg', 350, 'Chicken Nihari')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                <img style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+            </div>
+        </div>
+            <!-- This will also take up 6 out of 12 columns -->
+        <div class="col-sm-4" style="margin-top: -20px;">    
+    
+            <div class="all_pic" >
+                <div>
+                    <img src="/pics/Beef-Nihari.webp" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                    <h7 class="all_pic_heading_name">Beef Nihari</h7>
+                </div>
+                <h7 class="all_pic_heading_name_p">Rs.600/-</h7>
+            </div>
+            <div onclick="showSlider('/pics/Beef-Nihari.webp', 600, 'Beef Nihari')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+                <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+            </div>
+        </div>
+    </div>
+    
+
+   <div class="row" style="margin-top: 50px;">
+    <div class="col-sm-4"> <!-- This will take up 6 out of 12 columns -->
+        <div class="all_pic" >
+            <div>
+                <img src="/pics/chote paye.webp" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Chote Paye</h7>
+                
+            </div>
+            <h7 class="all_pic_heading_name_p"> Rs.400/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/chote paye.webp', 400, 'Chote Paye')"  style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/DSC05589-scaled.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px; padding-top: 20px;">
+                <h7 class="all_pic_heading_name">Makai Roti</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p" style="margin-left: 210px;">Rs.50/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/DSC05589-scaled.jpg', 50, 'Makai Roti')"  style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/sada roti.png" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Sada Roti</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p">Rs.20/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/sada roti.png', 20, 'Sada Roti')"   style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+</div>
+<h2 id="fish" style="font-family: 'Cooper Black'; margin-left: 50px; margin-top: 50px;">Desi Fish</h2>
+<div class="row">
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/Masala Fish.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Masala Fish</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p">Rs.600/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/Masala Fish.jpg', 600, 'Masala Fish')"  style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+</div>
+<!-- Rest of your website content -->
+
+<h2  id="aloo_paratha" style="font-family: 'Cooper Black'; margin-left: 50px; margin-top: 50px;">Sabzi</h2>
+
+<div class="row">
+    <div class="col-sm-4"> <!-- This will take up 6 out of 12 columns -->
+        <div class="all_pic" >
+            <div>
+                <img src="/pics/aloo methi.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Aloo Methi</h7>
+                
+            </div>
+            <h7 class="all_pic_heading_name_p"> Rs.100/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/aloo methi.jpg', 100, 'Aloo Methi')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/aloo qeema.jpg" style="height: 111px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px; padding-top: 20px;">
+
+                <h7 class="all_pic_heading_name">Aloo Qeema</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p" style="margin-left: 210px;">Rs.180/-</h7>
+        </div>
+        <div  onclick="showSlider('/pics/aloo qeema.jpg', 180, 'Aloo Qeema')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/aloo-gobi-recipe.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Aloo Gobhi</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p">Rs.100/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/aloo-gobi-recipe.jpg', 100, 'Aloo Gobhi')"  style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top: 50px;">
+    <div class="col-sm-4"> <!-- This will take up 6 out of 12 columns -->
+        <div class="all_pic" >
+            <div>
+                <img src="/pics/aloo gajar.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Aloo Gajar</h7>
+                
+            </div>
+            <h7 class="all_pic_heading_name_p"> Rs.100/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/aloo gajar.jpg', 100, 'Aloo Gajar')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/Aloo-Paratha-4.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px; padding-top: 20px;">
+                <h7 class="all_pic_heading_name">Aloo Paratha</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p" style="margin-left: 210px;">Rs.80/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/Aloo-Paratha-4.jpg', 80, 'Aloo Paratha')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px; left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+    <div class="col-sm-4"> <!-- This will also take up 6 out of 12 columns -->
+        <div class="all_pic">
+            <div>
+                <img src="/pics/moli k paratha.jpg" style="height: 120px; margin-top: 33px; margin-left: 23px; margin-bottom: 33px;">
+                <h7 class="all_pic_heading_name">Moli Paratha</h7>
+            </div>
+            <h7 class="all_pic_heading_name_p">Rs.80/-</h7>
+        </div>
+        <div onclick="showSlider('/pics/moli k paratha.jpg', 80, 'Aloo Paratha')" style="margin-left: 350px; background-color: #FFA500; border-radius: 39px; width: 40px; height: 40px; margin-top: -50px;">
+            <img style="position: relative; top: 5px; right: 3px;left:5px; width: 30px; height: 30px; border-radius: 26px;" src="/pics/white-plus-icon-15-removebg-preview.png">
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <h3 style="font-family: 'Cooper Black'; margin-left: 50px; position: relative; top: 30px">Desi Ventures</h3>
+    <nav>
+        <ul>
+            <li><a href="/contact">Delivery Hours</a></li>
+            <li><a href="/contact">Delivery Location</a></li>
+            <li><a href="/contact">Store Timngs</a></li>
+            <li><a href="/contact">About Us</a></li>
+            <li><a href="/auth/login">My Profile</a></li>
+        </ul>
+    </nav>
+    <br><h3 class="head_text" style=" font-weight: 500; font-size: 23px; margin-left: 50px; position: relative; top: 01px">Contact us</h3>
+   
+        <button type="button" style="border: none; margin-left:60px; position: relative; 
+        top: 07px; border: none; border-radius: 15px ; height: 45px; width: 09%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;font-weight: 700;  font-size: 18px;  " class="btn btn-default btn-sm">
+           <span onclick="window.open('https://api.whatsapp.com/', '_blank')"><img style="position: relative; right: 13px; height: 35px; width: 50px; padding-right: 0px; " src="/pics/WhatsApp-logo.png" alt="WhatsApp" onclick=""></span> 
+           Chats</button>
+
+         <button type="button" style="margin-left:30px;  position: relative;
+            top: 7px; border: none; border-radius: 15px ; height: 45px; width: 13%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ; font-size: 18px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-default btn-sm">
+           <span ><img style="height: 18px; width: 35px; " src="/pics/phone-removebg-preview.png"></span> 
+           +923094900205</button>
+           <h3 class="head_text" style="position: relative; top: -100px; margin-left:450px; font-weight: 500; font-size: 23px;">Store Timings</h3>
+               <h3 class="head_text" style="position: relative; top: -92px; margin-left:450px; font-weight: 500; font-size: 22px;">65 green park 80 ft road Lahore</h3>
+               <h3 class="head_text" style="position: relative; top: -265px; margin-left:1145px; font-weight: 500; font-size: 20px;">Payment Method</h3>
+            <img style="position:absolute; top: 3310px; margin-left:1150px; width: 10%; height: 80px;" src="/pics/easypaisa-new-logo-0B6AAF8329-seeklogo.com-removebg-preview _real.png"
+              >
+           <div class="navbar_a">
+                <a href="#" class="navbar-link">Teams of Service</a>
+                <a href="#" class="navbar-link">Privacy Policy</a>
+                <a href="#" class="navbar-link">Return</a>
+                <div class="navbar-top-border"></div>
+                <div class="navbar-bottom-border"></div>
+             </div>
+            
+</div>
+</body>
+</html>
